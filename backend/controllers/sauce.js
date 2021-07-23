@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const Sauce = require('../models/sauce');
 
+// récupere toutes les sauces
 exports.getAllSauce = (req, res, next) => {
     Sauce.find()
         .then(things => res.status(200).json(things))
@@ -11,6 +12,7 @@ exports.getAllSauce = (req, res, next) => {
         }));
 }
 
+// récupere la sauce demander
 exports.getOneSauce = (req, res, next) => {
     Sauce.findOne({
             _id: req.params.id
@@ -21,6 +23,7 @@ exports.getOneSauce = (req, res, next) => {
         }));
 }
 
+// crée une nouvelle sauce
 exports.createSauce = (req, res, next) => {
     const sauceObject = JSON.parse(req.body.sauce);
     delete sauceObject._id;
@@ -37,7 +40,7 @@ exports.createSauce = (req, res, next) => {
         }));
 }
 
-
+// modifier une sauce
 exports.modifyThing = (req, res, next) => {
     const sauceObject = req.file ? {
         ...JSON.parse(req.body.thing),
@@ -59,6 +62,7 @@ exports.modifyThing = (req, res, next) => {
         }));
 };
 
+// supprimer une sauce
 exports.deleteSauce = (req, res, next) => {
     Sauce.findOne({
             _id: req.params.id
@@ -82,6 +86,7 @@ exports.deleteSauce = (req, res, next) => {
         }));
 };
 
+// systeme de like et dislike
 exports.likeDislikeSauce = (req, res, next) => {
     const like = req.body.like;
     const userId = req.body.userId;

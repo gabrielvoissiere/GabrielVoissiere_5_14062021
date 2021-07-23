@@ -1,6 +1,4 @@
-const { ObjectID } = require('bson');
 const mongoose = require('mongoose');
-const { setInterval } = require('timers');
 
 const sauceSchema = mongoose.Schema({
   userId: { type: String, required: true },

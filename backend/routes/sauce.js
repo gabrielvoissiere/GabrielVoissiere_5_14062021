@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const auth = require('../middleware/auth');
+const auth = require('../middleware/auth'); // importation de middleware d'autentification
 const sauceCtrl = require('../controllers/sauce');
-const multer = require('../middleware/multer-config');
+const multer = require('../middleware/multer-config'); // importation de middleware pour le traitement des images
 
 router.get('/', auth, sauceCtrl.getAllSauce);
 router.get('/:id', auth, sauceCtrl.getOneSauce);
