@@ -9,7 +9,7 @@ const cors = require("cors") // importation de cors pour l'origine des requettes
 
 const stuffRoutes = require('./routes/sauce'); // importation de la routes des sauces
 const userRoutes = require('./routes/user'); // importation de la routes del'utilisateur
-const path = require('path'); // chemin pour les images
+const path = require('path'); // chemin pCour les images
 
 
 const app = express() // création de l'app express
