@@ -9,5 +9,3 @@ __But du projet :__
 
 __Langage utilisés :__
 * JavaScript (Node JS)
-
-<a href="https://gabrielvoissiere.github.io/GabrielVoissiere_2_14062021/">Voir le projet</a>
